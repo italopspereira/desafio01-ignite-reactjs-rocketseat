@@ -1,0 +1,43 @@
+main {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.todo {
+  position: absolute;
+  top: 172px;
+  display: flex;
+}
+.todo form {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.todo form input {
+  background: var(--gray-500);
+  width: 39.8rem;
+  border: 1px solid var(--gray-700);
+  border-radius: 8px;
+  padding: 16px;
+  gap: 8px;
+  font-size: 16px;
+  line-height: 22.4px;
+  color: var(--gray-700);
+  cursor: pointer;
+}
+.todo form button {
+  width: 90px;
+  height: 52px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--blue-dark);
+  color: var(--gray-100);
+  line-height: 19.6px;
+  font-weight: 700;
+  font-size: 14px;
+  gap: 8px;
+}
