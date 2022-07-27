@@ -1,11 +1,12 @@
 import { Header } from "./components/Header";
-import { Todo } from "./components/Todo";
+import { Form } from "./components/Form";
+import { Task } from "./components/Task";
 
 export function App() {
   return (
     <div>
       <Header />;
-      <Todo />;
+      <Task />
     </div>
   );
 }

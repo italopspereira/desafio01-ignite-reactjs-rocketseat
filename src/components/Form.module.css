@@ -1,21 +1,15 @@
-main {
+form {
   display: flex;
-  flex-direction: row;
+  position: absolute;
+  width: 736px;
+  height: 54px;
   align-items: center;
   justify-content: center;
-}
-
-.todo {
-  position: absolute;
-  top: 172px;
-  display: flex;
-}
-.todo form {
-  display: flex;
-  align-items: center;
+  left: calc(50% - 736px / 2);
+  top: 173px;
   gap: 8px;
 }
-.todo form input {
+form input {
   background: var(--gray-500);
   width: 39.8rem;
   border: 1px solid var(--gray-700);
@@ -24,10 +18,10 @@ main {
   gap: 8px;
   font-size: 16px;
   line-height: 22.4px;
-  color: var(--gray-700);
+  color: var(--gray-100);
   cursor: pointer;
 }
-.todo form button {
+form button {
   width: 90px;
   height: 52px;
   border-radius: 8px;
@@ -40,4 +34,8 @@ main {
   font-weight: 700;
   font-size: 14px;
   gap: 8px;
+  cursor: pointer;
+}
+form button:hover {
+  background: var(--blue);
 }

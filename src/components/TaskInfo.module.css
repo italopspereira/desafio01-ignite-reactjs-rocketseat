@@ -1,0 +1,28 @@
+.TaskInfo {
+  width: 736px;
+  height: 19px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 0px;
+}
+.TaskInfo label {
+  display: flex;
+  align-items: center;
+  color: var(--blue);
+  gap: 10px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+}
+.TaskInfo label span {
+  display: flex;
+  align-items: center;
+  background-color: var(--gray-400);
+  color: var(--gray-200);
+  padding: 2px 8px;
+  border-radius: 999px;
+}
