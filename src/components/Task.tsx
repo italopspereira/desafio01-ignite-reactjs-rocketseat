@@ -31,13 +31,12 @@ export function Task() {
       task.id === id
         ? {
             ...task,
-            isDone: !task.isCompleted,
+            isCompleted: !task.isCompleted,
           }
         : task
     );
-
+    console.log(newTasks);
     setTasks(newTasks);
-    localStorage.setItem("@todo:tasks", JSON.stringify(newTasks));
   }
 
   const countAllTasks = tasks.length;
@@ -54,16 +53,20 @@ export function Task() {
           countTasks={countAllTasks}
           countCompletedTasks={countCompletedTasks}
         />
-        <div className={styles.taskList}>
-          {tasks.map((task) => (
-            <TaskContent
-              key={task.id}
-              task={task}
-              onCheckTask={handleCheckTask}
-              onDeleteTask={handleDeleteTask}
-            />
-          ))}
-        </div>
+        {tasks.length > 0 ? (
+          <div className={styles.taskList}>
+            {tasks.map((task) => (
+              <TaskContent
+                key={task.id}
+                task={task}
+                onCheckTask={handleCheckTask}
+                onDeleteTask={handleDeleteTask}
+              />
+            ))}
+          </div>
+        ) : (
+          <EmptyTask />
+        )}
       </div>
     </div>
   );

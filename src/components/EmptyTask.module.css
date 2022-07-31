@@ -7,7 +7,7 @@
   gap: 16px;
   width: 736px;
   height: 244px;
-  border: 1px solid var(--gray-400);
+  border-top: 1px solid var(--gray-400);
   border-radius: 8px;
 }
 .emptyTask h1 {

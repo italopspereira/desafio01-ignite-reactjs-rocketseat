@@ -11,18 +11,47 @@
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.06);
   border-radius: 8px;
 }
-.taskContent svg {
+.taskContent button {
   cursor: pointer;
+}
+.taskContent .checkButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.125rem;
+  width: 1.1rem;
+  height: 1.1rem;
+  border: 2px solid var(--blue);
+  border-radius: 50%;
+  background-color: transparent;
+  color: var(--gray-100);
+}
+.taskContent .checkCompletedButton {
+  background-color: var(--blue);
+}
+.trashButton {
+  cursor: pointer;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 4px;
+  border: 0;
+  background: none;
+  color: var(--gray-300);
+  transition: color 0.15s;
 }
 .taskContent .taskTitle {
   width: 632px;
   height: 40px;
-}
-.taskContent .taskTitle p {
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 140%;
-  color: var(--gray-100);
+  color: var(--gray-200);
+}
+.taskContent .titleDone {
+  text-decoration: line-through;
+  background: var(--gray-500);
+  color: var(--gray-300);
+  border: none;
 }

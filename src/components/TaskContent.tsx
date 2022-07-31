@@ -1,6 +1,7 @@
-import { Circle, Trash } from "phosphor-react";
+import { Check, Circle, Trash } from "phosphor-react";
 import { TypeTask } from "../types/TaskTypes";
 import styles from "./TaskContent.module.css";
+import CheckedButton from "../assets/CheckedButton.svg";
 
 interface TaskProps {
   task: TypeTask;
@@ -22,11 +23,20 @@ export function TaskContent({
 
   return (
     <div className={styles.taskContent}>
-      <Circle color="var(--blue-dark)" size={20} onClick={handleCheckTask} />
-      <div className={styles.taskTitle}>
-        <p>{title}</p>
-      </div>
-      <Trash color="var(--gray-300)" size={17} onClick={handleDeleteTask} />
+      <button
+        className={`${styles.checkButton} ${
+          isCompleted && styles.checkCompletedButton
+        }`}
+        onClick={handleCheckTask}
+      >
+        {isCompleted && <Check size={10} weight="bold" />}
+      </button>
+      <p className={`${styles.taskTitle} ${isCompleted && styles.titleDone}`}>
+        {title}
+      </p>
+      <button className={styles.trashButton}>
+        <Trash color="var(--gray-300)" size={17} onClick={handleDeleteTask} />
+      </button>
     </div>
   );
 }
